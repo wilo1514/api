@@ -1,4 +1,6 @@
 
+
+
 window.addEventListener('load', function () {
     fetch('http://localhost:3001/empresa')
         .then(response => response.json())
@@ -49,6 +51,7 @@ window.addEventListener('load', function () {
 
 
 
+
 function generarNumeroAleatorio() {
     return Math.floor(Math.random() * 900000000 + 100000000).toString();
 }
@@ -94,18 +97,22 @@ function mostrarAlerta(titulo, mensaje, tipo) {
     `;
     alertContainer.innerHTML = alertaHTML;
 }
+var socket = io.connect('http://localhost:3001', {
+    forceNet: true
+});
 
 function notiAlerta() {
-    const notiHTML = `${
-    <script>
-        var socket = io.connect('http://localhost:3001/', {
-            forceNet: true
-        })
-        socket.on('mensaje', (data)=>console.log(data))
-    </script>}
-    `;
-    noti.innerHTML = notiHTML;
+    socket.emit('agregar', { mensaje: 'Mensaje de prueba' });
+
+    socket.on('respuesta', function (data) {
+        const mensaje = data.mensaje
+        mostrarAlerta('Inserción Correcta', mensaje, 'alert-success');
+        console.log('Respuesta del servidor:', mensaje);
+    });
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const enviarBtn = document.getElementById('enviarBtn');
@@ -130,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const telefono = document.getElementById('telefono').value;
         const domicilio = document.getElementById('domicilio').value;
-        //const empresaDetalle = document.getElementById('empresa').value;
 
         if (ruc === '' || cedula === '' || nombre === '' || apellido === '' || email === '' || telefono === '' || domicilio === '') {
             mostrarAlerta('Campos Vacíos', 'Por favor, complete todos los campos antes de enviar.', 'alert-warning');
@@ -159,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(response => {
                     if (response.ok) {
                         encerarValores();
-                        mostrarAlerta('Inserción Correcta', 'La inserción se realizó correctamente.', 'alert-success');
                         notiAlerta();
                         return response.json();
                         
