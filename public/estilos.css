@@ -5,7 +5,6 @@ body {
     padding: 0;
   }
   
-  /* Estilos para el contenedor principal */
   .container {
     width: 90%;
     max-width: 800px;
@@ -16,7 +15,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Estilos para los títulos */
   h2 {
     color: #333;
     text-align: center;
@@ -34,20 +32,16 @@ body {
   }
   .datos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
-    grid-gap: 10px; /* Espacio uniforme entre las columnas */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
   
-
-  
-  /* Estilo para etiquetas */
   label {
     display: block;
     margin-bottom: 8px;
    font-family: "Times New Roman", serif;
   }
   
-  /* Estilo para campos de entrada de texto */
   input[type="text"],
   input[type="email"] {
     width: 100%;
@@ -59,7 +53,6 @@ body {
   box-sizing: border-box;
   }
   
-  /* Estilo para botones */
   button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -67,20 +60,14 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-        display: block; /* Hacer que el botón sea un elemento de bloque */
-        margin: 0 auto; /* Centrar horizontalmente con margen automático */
-    
+        display: block; 
+        margin: 0 auto; 
   }
   
   button:hover {
     background-color: #0056b3;
   }
 
-
-
-
-
-  /* Estilos para los botones */
   button {
     padding: 10px 20px;
     background-color: #07738E;
@@ -94,7 +81,6 @@ body {
     background-color: #0056b3;
   }
   
-  /* Estilos para los campos de entrada y etiquetas */
   label {
     display: block;
     margin-top: 10px;
@@ -131,12 +117,6 @@ body {
     color: white;
   }
 
-
-
-
-
-
-
   #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -160,7 +140,6 @@ body {
     color: white;
   }
 
-  /* Estilos para las tablas */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -170,10 +149,7 @@ body {
     border: 1px solid #ccc;
     padding: 8px;
   }
-  
-  /* Estilos para los select */
-  
-  
+    
   select {
     width: 100%;
     padding: 16px 20px;
@@ -182,7 +158,6 @@ body {
     background-color: #f1f1f1;
   }
 
-  /* Estilos para los divs */
   div {
     margin: 10px 0;
   }
