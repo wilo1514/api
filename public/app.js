@@ -49,30 +49,6 @@ window.addEventListener('load', function () {
     
 });
 
-
-
-
-function generarNumeroAleatorio() {
-    return Math.floor(Math.random() * 900000000 + 100000000).toString();
-}
-
-function generarValorAlfanumerico() {
-    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let resultado = '';
-    for (let i = 0; i < 8; i++) {
-        resultado += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-    }
-    return resultado;
-}
-function generarValores() {
-    document.getElementById('ruc').value = generarNumeroAleatorio();
-    document.getElementById('cedula').value = generarNumeroAleatorio();
-    document.getElementById('nombre').value = "Nombre " + generarValorAlfanumerico();
-    document.getElementById('apellido').value = "Apellido " + generarValorAlfanumerico();
-    document.getElementById('email').value = generarValorAlfanumerico() + "@gmail.com";
-    document.getElementById('telefono').value = generarNumeroAleatorio();
-    document.getElementById('domicilio').value = generarValorAlfanumerico();
-}
 function encerarValores() {
     document.getElementById('ruc').value = "";
     document.getElementById('cedula').value = "";
@@ -126,8 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < filas.length; i++) {
             const fila = filas[i];
             const celdas = fila.getElementsByTagName('td');
-            console.log('Fila ' + i + ': ' + celdas[0].textContent.toString());
-            valoresCeldas.push({ "empresa_detalle": celdas[0].textContent.toString() });
+            if (celdas[0]) {
+                console.log('Fila ' + i + ': ' + celdas[0].textContent.toString());
+                valoresCeldas.push({ "empresa_detalle": celdas[0].textContent.toString() });
+            }
         }
 
         const ruc = document.getElementById('ruc').value;

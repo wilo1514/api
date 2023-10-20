@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para el contenedor principal */
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para los títulos */
+  h2 {
+    color: #333;
+    text-align: center;
+    font-family: "Georgia", serif;
+  }
+
+  
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .datos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    grid-gap: 10px; /* Espacio uniforme entre las columnas */
+  }
+  
+
+  
+  /* Estilo para etiquetas */
+  label {
+    display: block;
+    margin-bottom: 8px;
+   font-family: "Times New Roman", serif;
+  }
+  
+  /* Estilo para campos de entrada de texto */
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  
+  /* Estilo para botones */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+        display: block; /* Hacer que el botón sea un elemento de bloque */
+        margin: 0 auto; /* Centrar horizontalmente con margen automático */
+    
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+  /* Estilos para los botones */
+  button {
+    padding: 10px 20px;
+    background-color: #07738E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para los campos de entrada y etiquetas */
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #empresaTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #empresaTable td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #empresaTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #empresaTable tr:hover {background-color: #ddd;}
+  
+  #empresaTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #074F93;
+    color: white;
+  }
+
+
+
+
+
+
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1B7DA7;
+    color: white;
+  }
+
+  /* Estilos para las tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  /* Estilos para los select */
+  
+  
+  select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+  /* Estilos para los divs */
+  div {
+    margin: 10px 0;
+  }
+
